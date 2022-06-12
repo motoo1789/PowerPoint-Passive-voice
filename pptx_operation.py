@@ -71,10 +71,8 @@ def addNote(target_texts):
                 for slide_shape in slide.shapes:
                     for text in target_texts :
                         if text == slide_shape.text:
-                            print(slide.notes_slide.notes_text_frame.text)
                             notes_slide = slide.notes_slide
                             text_frame = notes_slide.notes_text_frame
-                            print(text_frame.text)
                             text_frame.text = "受け身だーーーーー"
 
         prs.save(pptx_file)
