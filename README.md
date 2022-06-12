@@ -23,5 +23,4 @@ self.process.stdin.write(sentence.encode('cp932') + six.b('\n'))
 line = self.process.stdout.readline().rstrip().decode('cp932')
 
 \# ignal.alarm(0)
-
 alarm.cancel()
