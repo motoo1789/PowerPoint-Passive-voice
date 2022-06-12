@@ -1,18 +1,10 @@
-import pptx
-from pptx.exc import PackageNotFoundError
+from pptx_operation import pptx_start
+from pptx_operation import addNote
 
-import glob
 
-pptx_files = []
-target_path = "./pptx/**"
+from JUMAN import juman_app
 
-files = glob.glob(target_path,recursive=True)
-
-for ispptx in files:
-    if ".pptx" in ispptx:
-        pptx_files.append(ispptx)
-
-for pptx_file in pptx_files:
-    print(pptx_file)
-
-len(pptx_files)
+pptx_taple = pptx_start()
+# comment_target = juman_passive(pptx_taple)
+# juman_app(pptx_taple)
+# addNote(comment_target)
